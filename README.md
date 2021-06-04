@@ -13,8 +13,17 @@ Spis treści:
 <h1 id="instalacja">1. Instalacja</h1>
 
 ```
-devtools::install_github("tinyheero/tinyutils", upgrade_dependencies = FALSE)
+devtools::install_github("chmjelek/scania")
 ```
+
+Przy zapytaniu:
+```
+Enter one or more numbers, or an empty line to skip updates:
+```
+
+Należy wpisać `1` i potwierdzić klawiszek `enter`.
+
+Po instalacji stwórz skrypt i wywołaj pakiet używając `scania::` albo `library(scania)`
 
 Aby zobaczyć pełną listę eksportowanych funkcji:
 
@@ -22,6 +31,10 @@ Aby zobaczyć pełną listę eksportowanych funkcji:
 library(scania)
 ls("package:scania")
 ```
+
+Przykładowe wywowałanie:
+
+![](inst/img/inst.png)
 
 <h1 id="opis">2. Opis</h1>
 
