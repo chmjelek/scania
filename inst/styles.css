@@ -1,0 +1,14 @@
+.main-container {
+  max-width: 90% !important;
+  margin: auto;
+  padding: 1em;
+}
+
+#wykresy-zbiorcze.active {
+  display: flex;
+}
+
+.left, .right {
+  max-width: 50%;
+}
+

@@ -1,0 +1,13 @@
+Package: scania
+Type: Package
+Title: Predict failures and minimize costs based on sensor readings in Scania trucks
+Version: 0.1.0
+Author: Alicja Matuszewska, Paulina Frysiak, Kajetan Adanowicz, Krzysztof Rogozinski, Mateusz Talarski
+Maintainer: Mateusz Talarski <81282@student.ue.poznan.pl>
+Description: The package shows a possbile solution of Kaggle's Air pressure system failures in Scania trucks  
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 4.0.3)
+Imports: assertthat, caret, data.table, dplyr, DT, e1071, ggplot2, purrr, rmarkdown, tibble, tidyr, xgboost
+RoxygenNote: 7.1.1

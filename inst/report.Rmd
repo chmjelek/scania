@@ -1,0 +1,87 @@
+---
+title: " Air pressure system failures in Scania trucks - raport"
+author: "Alicja Matuszewska, Paulina Frysiak, Kajetan Adanowicz, Krzysztof Rogozinski, Mateusz Talarski"
+date: "02.06.2021"
+output: 
+    html_document:
+        theme: spacelab
+        toc: yes
+        toc_float: yes
+        df_print: paged
+        css: styles.css
+---
+
+```{r global-options, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "", fig.width = 6, echo = FALSE, warning = FALSE, message = FALSE
+)
+```
+
+## Usunięte atrybuty {.tabset .tabset-fade}
+
+### Nazwy {.fluid-row}
+```{r eval = TRUE}
+cat("Usunieto:", length(data$preprocessed$attrs$rm$col_name), "atrybutów:", data$preprocessed$attrs$rm$col_name)
+```
+
+### Stosunek zer {.fluid-row}
+
+```{r out.width='75%'}
+barplot(data$preprocessed$attrs$rm$zeros_ratio, ylab = "Stosunek zer", ylim = c(0, 1), las = 2, cex.names = .5)
+```
+
+### Stosunek wartości brakujących {.fluid-row}
+
+```{r out.width='75%'}
+barplot(data$preprocessed$attrs$rm$na_ratio, ylab = "Stosunek wartosci brakujacych", ylim = c(0, 1), las = 2, cex.names = .5)
+```
+
+### Odchylenie standardowe {.fluid-row}
+
+```{r out.width='75%'}
+barplot(data$preprocessed$attrs$rm$sd, ylab = "Odchylenie standardowe", las = 2, cex.names = .5)
+```
+
+```{r echo=FALSE}
+plots <- lapply(to_plot, function(i) {
+  if (i %in% data$preprocessed$attrs$save$col_name) {
+    plot_noise(data = data, variable = i, n = 100)
+  }
+}) %>% setNames(to_plot)
+```
+
+## Wybrane zaszumione parametry {.tabset .tabset-fade}
+
+### Szum {.fluid-row}
+
+```{r eval = TRUE}
+cat("Wybrano", length(paste0(as.numeric(names(data$noises)) * 100, "%")[-1]), "poziomy zaszumienia:", paste0(as.numeric(names(data$noises)) * 100, "%")[-1], "\nZatem klasa pozytywna zostala powiekszona o", length(paste0(as.numeric(names(data$noises)) * 100, "%")[-1]) * 1000, "zaszumionych rekordów")
+```
+
+```{r, echo = FALSE, eval = TRUE}
+
+
+out <- lapply(to_plot, function(i) {
+  if (i %in% data$preprocessed$attrs$save$col_name) {
+    a1 <- knitr::knit_expand(text = sprintf("### %s\n", i))
+    a2 <- knitr::knit_expand(text = "\n```{r echo=FALSE, out.width='100%'}")
+    a3 <- knitr::knit_expand(text = sprintf("\nplots[['%s']]", i))
+    a4 <- knitr::knit_expand(text = "\n```\n")
+
+    paste(a1, a2, a3, a4, collapse = "\n")
+  } else {
+    a1 <- knitr::knit_expand(text = sprintf("### %s\n", i))
+    a2 <- knitr::knit_expand(text = sprintf("Nie ma takiego atrybutu: '%s'", i))
+
+    paste(a1, a2, collapse = "\n")
+  }
+})
+```
+
+`r knitr::knit(text = paste(out, collapse = '\n'))`
+
+## Modele {.tabset .tabset-fade}
+
+```{r echo=FALSE}
+DT::datatable(models, rownames = FALSE, options = list(order = list(9, "asc")))
+```
