@@ -36,7 +36,16 @@ Dane należy pobrać: [link](https://archive.ics.uci.edu/ml/machine-learning-dat
 
 Przykładowe wywowałanie:
 
-![](inst/img/inst.png)
+```
+data <- scania::preprocessing(
+    train_path = file.path("path", "to", "your", "aps_failure_training_set.csv"),
+    test_path = file.path("path", "to", "your", "aps_failure_test_set.csv")
+)
+
+models <- scania::building_models(data)
+
+scania::generate_report(data = data, models = models)
+```
 
 <h1 id="opis">2. Opis</h1>
 
