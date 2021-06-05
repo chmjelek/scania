@@ -9,5 +9,5 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 4.0.3)
-Imports: assertthat, caret, data.table, dplyr, DT, e1071, ggplot2, purrr, rmarkdown, tibble, tidyr, xgboost
+Imports: assertthat, caret, data.table, dplyr, DT, e1071, ggplot2, purrr, randomForest, rmarkdown, tibble, tidyr, xgboost
 RoxygenNote: 7.1.1
