@@ -21,7 +21,7 @@ Przy zapytaniu:
 Enter one or more numbers, or an empty line to skip updates:
 ```
 
-Należy wpisać `1` i potwierdzić klawiszek `enter`.
+Należy wpisać `3` i potwierdzić klawiszek `enter`.
 
 Po instalacji stwórz skrypt i wywołaj pakiet używając `scania::` albo `library(scania)`
 
@@ -31,6 +31,8 @@ Aby zobaczyć pełną listę eksportowanych funkcji:
 library(scania)
 ls("package:scania")
 ```
+
+Dane należy pobrać: [link](https://archive.ics.uci.edu/ml/machine-learning-databases/00421/).
 
 Przykładowe wywowałanie:
 
