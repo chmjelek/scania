@@ -57,19 +57,19 @@ Głównym celem jest sklasyfikowanie awarii w samochodach ciężarowych Scania, 
 
 Z problemem tym związany jest również koszt błędnej klasyfikacji:
 
- $koszt_{1}$; wykonania niepotrzebnej kontroli (false negative), wynosi 10
+<img src="https://latex.codecogs.com/svg.latex?\&space;koszt_{1}">; wykonania niepotrzebnej kontroli (false negative), wynosi 10
 
- $koszt_{2}$; niewykrycia wadliwej ciężarówki (false positive), co może spowodować awarię, wynosi 500  
+<img src="https://latex.codecogs.com/svg.latex?\&space;koszt_{2}">; niewykrycia wadliwej ciężarówki (false positive), co może spowodować awarię, wynosi 500  
 
 Stąd koszt ogólny wynosi:
 
-$$koszt = koszt_{1}\cdot n_{1} + koszt_{2}\cdot n_{2}$$
+<img src="https://latex.codecogs.com/svg.latex?\&space;">
 
 gdzie:
 
-* <img src="https://render.githubusercontent.com/render/math?math=n_{1}"> - liczba niepotrzebnych kontroli
+* <img src="https://latex.codecogs.com/svg.latex?\&space;n_{1}"> - liczba niepotrzebnych kontroli
 
-* $n_{2}$ - liczba niewykrytych wadliwych ciężarówek
+* <img src="https://latex.codecogs.com/svg.latex?\&space;n_{2}"> - liczba niewykrytych wadliwych ciężarówek
 
 Naszym zadaniem jest minimalizacja tego kosztu.
 
