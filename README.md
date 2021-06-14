@@ -67,7 +67,7 @@ $$koszt = koszt_{1}\cdot n_{1} + koszt_{2}\cdot n_{2}$$
 
 gdzie:
 
-* $n_{1}$ - liczba niepotrzebnych kontroli
+* <img src="https://render.githubusercontent.com/render/math?math=n_{1}"> - liczba niepotrzebnych kontroli
 
 * $n_{2}$ - liczba niewykrytych wadliwych ciężarówek
 
