@@ -62,8 +62,7 @@ Z problemem tym związany jest również koszt błędnej klasyfikacji:
 <img src="https://latex.codecogs.com/svg.latex?\&space;koszt_{2}">; niewykrycia wadliwej ciężarówki (false positive), co może spowodować awarię, wynosi 500  
 
 Stąd koszt ogólny wynosi:
-
-<img src="https://latex.codecogs.com/svg.latex?\&space;koszt = koszt_{1}\cdot n_{1} + koszt_{2}\cdot n_{2}">
+<img src="https://latex.codecogs.com/svg.latex?\&space;koszt_{1} \cdot n_{1}">
 
 gdzie:
 
