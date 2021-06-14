@@ -63,7 +63,7 @@ Z problemem tym związany jest również koszt błędnej klasyfikacji:
 
 Stąd koszt ogólny wynosi:
 
-<img src="https://latex.codecogs.com/svg.latex?\&space;">
+<img src="https://latex.codecogs.com/svg.latex?\&space;koszt = koszt_{1}\cdot n_{1} + koszt_{2}\cdot n_{2}">
 
 gdzie:
 
